@@ -39,7 +39,6 @@ player
   .updateDatabase();
 
 function speak(words) {
-  console.log('speak()', words);
   speech
     .speak(words, filePath)
     .then(function() {
