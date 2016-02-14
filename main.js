@@ -6,6 +6,8 @@ var Twit = require('twit');
 var join = require('path').join;
 var client = require('radiodan-client');
 
+var stream; // The Twitter stream
+
 // @todo  We should wait for this to actually complete before
 //       continuing because it's async. However, it's usually
 //       ok because the rest of the app takes a while to get
@@ -58,8 +60,12 @@ var T = new Twit({
 });
 
 function init() {
+  if (stream) {
+    return;
+  }
+
   console.log('init, joining twitter stream');
-  var stream = T.stream('user', {});
+  stream = T.stream('user', {});
   stream.on('tweet', function(tweet) {
     console.log('Tweet: ', tweet.text);
     if (tweet.text) {
