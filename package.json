@@ -1,0 +1,23 @@
+{
+  "name": "tweeter",
+  "version": "1.0.0",
+  "description": "A radiodan application that tweets",
+  "main": "main.js",
+  "scripts": {
+    "start": "node_modules/.bin/nf start",
+    "broker": "radiodan-broker",
+    "audio": "radiodan-server ../../config/radiodan-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Nicolaou <andrew.nicolaou@bbc.co.uk>",
+  "license": "Apache-2",
+  "dependencies": {
+    "express": "~4.10.7",
+    "foreman": "~1.2.0",
+    "native-promise-only": "^0.8.1",
+    "radiodan": "^1.0.0",
+    "radiodan-broker": "^1.4.0",
+    "radiodan-client": "^1.0.0",
+    "twit": "~2.2.2"
+  }
+}

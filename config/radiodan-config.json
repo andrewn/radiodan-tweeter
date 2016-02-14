@@ -1,0 +1,13 @@
+{
+  "dataPath": "/tmp/.andrewn-tweeter",
+  "defaults": {
+    "music": "../audio"
+  },
+  "players": [
+    {
+      "id": "main",
+      "name": "Main Player",
+      "player":"mpd"
+    }
+  ]
+}
