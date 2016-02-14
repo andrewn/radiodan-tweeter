@@ -8,7 +8,7 @@ var pico2wave = {
   },
   speak: function(words, outputPath) {
     return new Promise(function(resolve, reject) {
-      var cmd = '/usr/bin/env pico2wave --wave=' + outputPath + ' "' + words + '"';
+      var cmd = '/usr/bin/env pico2wave --lang="en-GB" --wave=' + outputPath + ' "' + words + '"';
       return exec(cmd, function(err, stdout, stderr) {
         err ? reject(err) : resolve(outputPath);
       });
